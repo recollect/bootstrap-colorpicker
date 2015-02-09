@@ -388,7 +388,7 @@ Color.prototype = {
     // from John Resig color plugin
     // https://github.com/jquery/jquery-color/
     stringParsers: [{
-        re: /#?([a-fA-F0-9]{2})([a-fA-F0-9]{2})([a-fA-F0-9]{2})/,
+        re: /^#?([a-fA-F0-9]{2})([a-fA-F0-9]{2})([a-fA-F0-9]{2})$/,
         format: 'hex',
         parse: function(execResult) {
             return [
@@ -399,7 +399,7 @@ Color.prototype = {
             ];
         }
     }, {
-        re: /#?([a-fA-F0-9])([a-fA-F0-9])([a-fA-F0-9])/,
+        re: /^#?([a-fA-F0-9])([a-fA-F0-9])([a-fA-F0-9])$/,
         format: 'hex',
         parse: function(execResult) {
             return [
@@ -410,7 +410,7 @@ Color.prototype = {
             ];
         }
     }, {
-        re: /rgb\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*?\)/,
+        re: /^rgb\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*?\)$/,
         format: 'rgb',
         parse: function(execResult) {
             return [
@@ -421,7 +421,7 @@ Color.prototype = {
             ];
         }
     }, {
-        re: /rgb\(\s*(\d+(?:\.\d+)?)\%\s*,\s*(\d+(?:\.\d+)?)\%\s*,\s*(\d+(?:\.\d+)?)\%\s*?\)/,
+        re: /^rgb\(\s*(\d+(?:\.\d+)?)\%\s*,\s*(\d+(?:\.\d+)?)\%\s*,\s*(\d+(?:\.\d+)?)\%\s*?\)$/,
         format: 'rgb',
         parse: function(execResult) {
             return [
@@ -432,7 +432,7 @@ Color.prototype = {
             ];
         }
     }, {
-        re: /rgba\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*(?:,\s*(\d+(?:\.\d+)?)\s*)?\)/,
+        re: /^rgba\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*(?:,\s*(\d+(?:\.\d+)?)\s*)?\)$/,
         format: 'rgba',
         parse: function(execResult) {
             return [
@@ -443,7 +443,7 @@ Color.prototype = {
             ];
         }
     }, {
-        re: /rgba\(\s*(\d+(?:\.\d+)?)\%\s*,\s*(\d+(?:\.\d+)?)\%\s*,\s*(\d+(?:\.\d+)?)\%\s*(?:,\s*(\d+(?:\.\d+)?)\s*)?\)/,
+        re: /^rgba\(\s*(\d+(?:\.\d+)?)\%\s*,\s*(\d+(?:\.\d+)?)\%\s*,\s*(\d+(?:\.\d+)?)\%\s*(?:,\s*(\d+(?:\.\d+)?)\s*)?\)$/,
         format: 'rgba',
         parse: function(execResult) {
             return [
@@ -454,7 +454,7 @@ Color.prototype = {
             ];
         }
     }, {
-        re: /hsl\(\s*(\d+(?:\.\d+)?)\s*,\s*(\d+(?:\.\d+)?)\%\s*,\s*(\d+(?:\.\d+)?)\%\s*?\)/,
+        re: /^hsl\(\s*(\d+(?:\.\d+)?)\s*,\s*(\d+(?:\.\d+)?)\%\s*,\s*(\d+(?:\.\d+)?)\%\s*?\)$/,
         format: 'hsl',
         parse: function(execResult) {
             return [
@@ -465,7 +465,7 @@ Color.prototype = {
             ];
         }
     }, {
-        re: /hsla\(\s*(\d+(?:\.\d+)?)\s*,\s*(\d+(?:\.\d+)?)\%\s*,\s*(\d+(?:\.\d+)?)\%\s*(?:,\s*(\d+(?:\.\d+)?)\s*)?\)/,
+        re: /^hsla\(\s*(\d+(?:\.\d+)?)\s*,\s*(\d+(?:\.\d+)?)\%\s*,\s*(\d+(?:\.\d+)?)\%\s*(?:,\s*(\d+(?:\.\d+)?)\s*)?\)$/,
         format: 'hsla',
         parse: function(execResult) {
             return [
