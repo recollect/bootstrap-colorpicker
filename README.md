@@ -1,3 +1,5 @@
+THIS REPOSITORY IS NO LONGER IN USE!
+
 # Bootstrap Colorpicker 2.0
 
 [![Build Status](https://travis-ci.org/mjolnic/bootstrap-colorpicker.png)](https://travis-ci.org/mjolnic/bootstrap-colorpicker)
